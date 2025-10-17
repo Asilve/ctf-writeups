@@ -25,3 +25,24 @@ Play this short game to get familiar with terminal applications and some of the 
 
 #### Thought Process / Solution.
 Given a Netcat command to connect to upon starting the CTF. Connected to it and given a text based game. Each time the game prompted an option, I selected the most appropriate response given the context. At the end, The flag was presented.
+
+## Log Hunt (Easy)
+#### Description
+Our server seems to be leaking pieces of a secret flag in its logs. The parts are scattered and sometimes repeated. Can you reconstruct the original flag?
+
+#### Thought Process
+I downloaded the file and tried to find a way to differentiate normal messages from the flag message, As stated in the hint, grep is a good candidate for this.
+
+#### Solution
+Outputted the whole file, seemed large, so definitely needed to use grep. All flags start with picoCTF so that was the natural first step. I found the start of the flag, but also it was cateogorised as "INFO FLAGPART:". So I did for "grep FLAGPART server.log", this returned all of the flag parts, which i them reassembled to find the final flag.
+
+## Time Machine (Easy)
+#### Description
+What was I last working on? I remember writing a note to help me remember...
+
+#### Thought Process
+Given a git repo, i first checked the program that the creator of the CTF was working on. It lead to a guessing game (same one as Binary Search) so i played that again. After finding not much of note (except an error message that a file was missing) I checked the "Drop In" folder. A message stated that this is what he worked on today, and they would need to look at their commit history. Besides this message, a .git folder was present, I thought to check there next.
+
+#### Solution
+Looking at the git folder, I saw a number of files and folders, one being a "COMMIT_EDITMSG" file. I opened that and saw the flag.
+
