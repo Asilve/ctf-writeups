@@ -46,3 +46,28 @@ Given a git repo, i first checked the program that the creator of the CTF was wo
 #### Solution
 Looking at the git folder, I saw a number of files and folders, one being a "COMMIT_EDITMSG" file. I opened that and saw the flag.
 
+## Commitment Issues (Easy)
+#### Description
+I accidentally wrote the flag down. Good thing I deleted it!
+
+#### Thought Process
+I was provided a git repo file. There was a text file inside that had the flag removed and "Top Secret" in its place. Naturally I knew I needed to find the information of the previous commit. After poking around, I found a file called HEAD that had two commits, the initial commit and the flag removal commit.
+
+#### Solution
+After researching how to revert back to a previous commit using the command line, I found a command i could use which was "git Checkout" along with the git commit code. This let me look at the previous commit, I use cat on the text file and the flag was there. 
+Note, After looking at solutions after completing the room, I found a better way of doing it using "git log" and "git show".
+
+## endianness (Easy)
+#### Description
+Know of little and big endian?
+
+#### Thought Process
+First time working with endianness. Found quite quickly that it involves converting to hexadecimal.
+
+#### Solution
+After connecting to the server using the netcat command provided, I was given a string (zapot) and asked for the little endian. I converted zapot to hexadecimal, and after confusing big and little endians for the first few attempts, I entered the little endian correctly. Following this I was prompted for the big endian, I entered it and it gave me the flag.
+
+
+
+
+
