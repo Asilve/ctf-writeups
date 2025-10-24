@@ -67,7 +67,24 @@ First time working with endianness. Found quite quickly that it involves convert
 #### Solution
 After connecting to the server using the netcat command provided, I was given a string (zapot) and asked for the little endian. I converted zapot to hexadecimal, and after confusing big and little endians for the first few attempts, I entered the little endian correctly. Following this I was prompted for the big endian, I entered it and it gave me the flag.
 
+## Collaborative Development (Easy)
+#### Description
+My team has been working very hard on new features for our flag printing program! I wonder how they'll work together?
 
+#### Thought Process
+Firstly, I checked the python file provided. No flag there. Then I thought about using git logs. Nothing there, then I looked at possible branches.
 
+#### Solution
+Using the git branch command, I saw main, and three other branches. I looked at the difference between main and each of the branches, which lead me to find all three parts of the flag, which I then reconstructed.
+
+## Blame Game (Easy)
+#### Description
+Someone's commits seems to be preventing the program from working. Who is it?
+
+#### Thought Process
+There was a message.py file, which had print("Hello, World!" - Missing the last bracket. Needed to find a way to see who modified the file. Thought to do git log but too many commits to find the user who made the error.
+
+#### Solution
+After some research, gitk message.py was the command i needed. It opened up a window that showed me all the changes to the file and who committed them. The name of the person who committed message.py last was the flag.
 
 
