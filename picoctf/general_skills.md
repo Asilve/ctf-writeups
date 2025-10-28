@@ -87,4 +87,20 @@ There was a message.py file, which had print("Hello, World!" - Missing the last 
 #### Solution
 After some research, gitk message.py was the command i needed. It opened up a window that showed me all the changes to the file and who committed them. The name of the person who committed message.py last was the flag.
 
+## binhexa (Easy)
+#### Description
+How well can you perfom basic binary operations?
+
+#### Thought Process / Solution
+After connecting to the netcat instance provided, I was presented with a sequence of binary operations I needed to perform on 2 numbers. After completing these, I needed to convert the last binary number to hexadecimal. I was given the flag after inputting it correctly.
+
+## repetitions (Easy)
+#### Description
+Can you make sense of this file?
+
+#### Thought Process
+Provided with a file. Decided to check the file type. After seeing it was an ASCII file, I checked the contents and saw it was encrypted, with base64 by my best guess (featured "==" at the end which is typical base64 encoding padding).
+
+#### Solution
+After decoding the file multiple times, I finally was provided with the flag I needed.
 
