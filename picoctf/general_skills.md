@@ -104,3 +104,23 @@ Provided with a file. Decided to check the file type. After seeing it was an ASC
 #### Solution
 After decoding the file multiple times, I finally was provided with the flag I needed.
 
+## Big Zip (Easy)
+#### Description
+Unzip this archive and find the flag.
+
+#### Thought Process
+After seeing a large quantity of text files and directories inside the main file, I knew I had to grep to find the "picoCTF" flag.
+
+#### Solution
+I used grep to search the immediate text files for "picoCTF", nothing came up, so i researched how to use grep to search inside directories too. This led me to "grep -r". After using this, I found the flag.
+
+## First Find (Easy)
+#### Description
+Unzip this archive and find the file named 'uber-secret.txt'
+
+#### Thought Process
+As I had just done Big Zip, Grep -r was fresh so I used that to find the flag. However as the challenge was to find the file, I thought to start again. The natural command I needed was find.
+
+#### Solution
+Using find with -type file and -name uber-secret, I found the file path. After that I used cat on the file path, and the flag was output.
+
