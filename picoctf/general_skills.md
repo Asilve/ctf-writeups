@@ -124,3 +124,40 @@ As I had just done Big Zip, Grep -r was fresh so I used that to find the flag. H
 #### Solution
 Using find with -type file and -name uber-secret, I found the file path. After that I used cat on the file path, and the flag was output.
 
+## runme.py (Easy)
+#### Description
+Run the runme.py script to get the flag.
+
+#### Solution
+I ran the provided python script which gave me the flag. Simple.
+
+## PW Crack 1 (Easy)
+#### Description
+Can you crack the password to get the flag?
+
+#### Thought Process
+After downloading the script and password.txt encrypted file, I decided to run the python script. It prompted me to enter the correct password, So i dug into the python code to see if I could find any information there.
+
+#### Solution
+Within the python code was an if statement that ran if it matched the password to the string "1e1a". So I plugged that in to the script when asked for a password and it gave me the flag.
+
+## PW Crack 2 (Easy)
+#### Description
+Can you crack the password to get the flag?
+
+#### Thought Process
+As with PW Crack 1, I decided to run the script provided. After doing so, again it asked for a password, so I once again decided to start digging into the python code for some answers.
+
+#### Solution
+As before, I found an if statement, this time however, the password was encoded in hexidecimal (0x64 for example, I knew the 0x prefix denoted hexidecimal). From there I just had to convert the hexidecimal to ascii and pop in the password into the script when i ran it. The flag was then given to me.
+
+## convertme.py (Easy)
+#### Description
+Run the Python script and convert the given number from decimal to binary to get the flag.
+
+#### Thought process
+We have done 3 python scripts, why not try one more. Again download and run script. It gave me a decimal number and asked me to convert it to binary.
+
+#### Solution
+After getting the decimal number from the script, I converted it to binary. Upon inputting the binary conversion I was given the flag.
+
