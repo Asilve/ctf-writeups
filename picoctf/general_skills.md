@@ -155,9 +155,22 @@ As before, I found an if statement, this time however, the password was encoded 
 #### Description
 Run the Python script and convert the given number from decimal to binary to get the flag.
 
-#### Thought process
+#### Thought Process
 We have done 3 python scripts, why not try one more. Again download and run script. It gave me a decimal number and asked me to convert it to binary.
 
 #### Solution
 After getting the decimal number from the script, I converted it to binary. Upon inputting the binary conversion I was given the flag.
 
+## fixme1.py (Easy)
+#### Description
+Fix the syntax error in this Python script to print the flag.
+
+#### Thought Process / Solution
+Downloaded and ran the code in the terminal. Saw there was an error on line 20, which is the print flag statemnent. I went into the code and saw the line had a space in front of it, making it syntactically incorrect. After fixing it and running it again, The print statement executed, giving me the flag.
+
+## fixme2.py (Easy)
+#### Description
+Fix the syntax error in the Python script to print the flag.
+
+#### Thought Process / Solution
+As with the previous CTF, I ran the code in the terminal to find which line gave the error. It was an if statement line which had an equality operator error (= instead of ==). After fixing it, I ran the code and i was given the flag.
