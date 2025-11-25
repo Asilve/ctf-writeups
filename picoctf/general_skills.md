@@ -174,3 +174,39 @@ Fix the syntax error in the Python script to print the flag.
 
 #### Thought Process / Solution
 As with the previous CTF, I ran the code in the terminal to find which line gave the error. It was an if statement line which had an equality operator error (= instead of ==). After fixing it, I ran the code and i was given the flag.
+
+## HashingJobApp (Easy)
+#### Description
+If you want to hash with the best, beat this test!
+
+#### Thought Process / Solution
+After being provided a netcat server to connect to, It gave me three prompts, each asking me to convert some text into a MD5 hash. After providing the 3 hashes correctly, I was given the flag.
+
+## Glitch Cat (Easy)
+#### Description
+Our flag printing service has started glitching!
+
+#### Thought Process
+I was provided a netcat server to connect to. When I did, I was given part of the flag, but the rest was encoded.
+
+#### Solution
+I quickly deduced that the final part of the flag was in hexadecimal (given that It looked like: chr(0x34), The 0x is a clear giveaway it is hexadecimal). After that, I just converted the hexadecimal numbers to text and it gave me the final part of the Flag.
+
+## Codebook (Easy)
+#### Description
+Run the Python script code.py in the same directory as codebook.txt.
+
+#### Thought Process / Solution
+As instructed, I ran the python script in the same directory as codebook. It gave me the flag, no other actions needed.
+
+## Magikarp Ground Mission (Easy)
+#### Description
+Do you know how to move between directories and read files in the shell?
+
+#### Thought process
+I connected to the netcat provided, and as suggested used the ls command to get started.
+
+#### Solution
+After connecting and using ls, I saw 2 text files, one that was the first of three parts to the flag, and another giving instructions to get the second part. I followed the instruction to the root directory ( cd / ) and repeated the process. found part 2 and another instruction for part 3, go to home directory ( cd ~ ). The last part of the flag was found here. Combining the three parts gave me the full flag needed.
+
+
