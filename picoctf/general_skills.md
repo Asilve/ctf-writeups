@@ -209,4 +209,38 @@ I connected to the netcat provided, and as suggested used the ls command to get 
 #### Solution
 After connecting and using ls, I saw 2 text files, one that was the first of three parts to the flag, and another giving instructions to get the second part. I followed the instruction to the root directory ( cd / ) and repeated the process. found part 2 and another instruction for part 3, go to home directory ( cd ~ ). The last part of the flag was found here. Combining the three parts gave me the full flag needed.
 
+## Python Wrangling (Easy)
+#### Description
+Python scripts are invoked kind of like programs in the Terminal... Can you run this Python script using this password to get the flag?
+
+#### Thought process
+After downloading the relevant files, I ran the python scrypt. It said I needed to use "-d" or "-e" and a file name. Obvious that these were for decrypt / encrypt respectively.
+
+#### Solution
+I ran the scrypt again with -d and the flag file that was provided. It asked me for a password that I then provided from the pw.txt file I was given. After this the flag was given to me.
+
+## 2warm (Easy)
+#### Description
+Can you convert the number 42 (base 10) to binary (base 2)
+
+#### Thought process / solution
+I simply converted the number 42 into binary which gave me the flag contents.
+
+## First Grep (Easy)
+#### Description
+Can you find the flag in this file?
+
+#### Thought process / Solution
+Obviously I needed to use grep to find the flag inside the file. After using the command, the whole file was output, suggesting the grep matched and output the whole file as it is all one line. using "wc -l file" confirmed my suspicion. Updating my grep to only include the matched regex string (grep -o 'picoCTF{a-zA-Z0-9_}'), I was provided the flag.
+
+## Bases (Easy)
+#### Description
+What does this bDNhcm5fdGgzX3IwcDM1 mean? I think it has something to do with bases.
+
+#### Thought process / Solution
+Saving the provided base64 string into a text file, then decoding it using the base64 -d command gave me the contents of the flag.
+
+
+
+
 
