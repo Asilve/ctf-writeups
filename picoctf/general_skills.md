@@ -240,7 +240,33 @@ What does this bDNhcm5fdGgzX3IwcDM1 mean? I think it has something to do with ba
 #### Thought process / Solution
 Saving the provided base64 string into a text file, then decoding it using the base64 -d command gave me the contents of the flag.
 
+## Rust fixme 1 (Easy)
+#### Description
+Have you heard of Rust? Fix the syntax errors in this Rust file to print the flag!
 
+#### Thought process / Solution
+Looking at the rust code in an IDE showed a issues in a let statement, a return statement and a println statement. Fixing these issues and running the code provided the flag.
+
+## Rust fixme 2 (Easy)
+#### Description
+The Rust saga continues? I ask you, can I borrow that, pleeeeeaaaasseeeee?
+
+#### Thought Process / Solution
+Upon inspecting the code, the functions were trying to use constants (let statements without the mutable label) in a setting where they needed to be mutable. Therefore I added mutable requirements to the variables and parameters of the functions. After running the code with these changes, the flag was provided.
+
+## Rust fixme 3 (Easy)
+#### Description
+Have you heard of Rust? Fix the syntax errors in this Rust file to print the flag!
+
+#### Thought Process / Solution
+Looking at the code, I could see we needed "unsafe" labels. Upon adding these, I ran the program and was given the flag.
+
+## Tab, Tab, Attack (Easy)
+#### Description
+Using tabcomplete in the Terminal will add years to your life, esp. when dealing with long rambling directory structures and filenames.
+
+#### Thought process / Solution
+I navigated through the files until i reached the end. There were 2 files here, a c file and an executable. The executable didn't have the executable permissions so I tried to chmod, however it failed to work (probably my machine). After this failed, I looked at the C file and the flag was inside there. If the chmod worked, Ide have ran the executable, which would have output the flag inside the C file.
 
 
 
