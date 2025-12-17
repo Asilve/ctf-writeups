@@ -268,5 +268,12 @@ Using tabcomplete in the Terminal will add years to your life, esp. when dealing
 #### Thought process / Solution
 I navigated through the files until i reached the end. There were 2 files here, a c file and an executable. The executable didn't have the executable permissions so I tried to chmod, however it failed to work (probably my machine). After this failed, I looked at the C file and the flag was inside there. If the chmod worked, Ide have ran the executable, which would have output the flag inside the C file.
 
+## Wave a flag (Easy)
+#### Description
+Can you invoke help flags for a tool or binary? This program has extraordinarily helpful information...
 
+#### Thought process
+Upon downloading the provided file, I checked what type of file I had downloaded. I found that It was an executable. So I knew I needed to run it.
 
+#### Solution
+After finding out it was an executable, I checked what the permissions where for the file. It lacked the executable permission so I changed the permissions to allow it to run. I then ran the executable for the first time. It told me to use the -h command when I call the executable, So I attempted that next. Once I ran the executable with the -h command, I was given the flag.
