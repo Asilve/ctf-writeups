@@ -277,3 +277,15 @@ Upon downloading the provided file, I checked what type of file I had downloaded
 
 #### Solution
 After finding out it was an executable, I checked what the permissions where for the file. It lacked the executable permission so I changed the permissions to allow it to run. I then ran the executable for the first time. It told me to use the -h command when I call the executable, So I attempted that next. Once I ran the executable with the -h command, I was given the flag.
+
+## Static ain't always noise
+#### Description
+Can you look at the data in this binary? The bash script might help!
+
+#### Thought process
+After downloading the two files, I changed the permissions to allow them to be executed. I tried to execute both of them in turn to see if they provided any hints.
+
+#### Solution
+The first file I tried to execute (Static) gave me a hint to try the other file. I executed the second file (ltdis.sh) and I was given a hint to run it again, but with a file as a parameter. I ran it again with Static and it created a text file. Inside this file was a lot of text / lines, So I used grep to find the flag.
+
+
