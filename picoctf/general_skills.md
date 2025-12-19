@@ -288,4 +288,13 @@ After downloading the two files, I changed the permissions to allow them to be e
 #### Solution
 The first file I tried to execute (Static) gave me a hint to try the other file. I executed the second file (ltdis.sh) and I was given a hint to run it again, but with a file as a parameter. I ran it again with Static and it created a text file. Inside this file was a lot of text / lines, So I used grep to find the flag.
 
+## Nice netcat... (Easy)
+#### Description
+There is a nice program that you can talk to by using this command in a shell
+
+#### Thought process / Solution
+I knew I needed to connect to the server via netcat, and then follow some instructions. I connected and I was given a sequence of numbers, So it seemed obvious that I needed to convert this sequence into text format. I Thought hexadecimal or ASCII was the way to go, So I tried both. The flag was provided when I converted the numbers to ASCII.
+
+
+
 
