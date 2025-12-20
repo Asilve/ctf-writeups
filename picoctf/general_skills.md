@@ -295,6 +295,19 @@ There is a nice program that you can talk to by using this command in a shell
 #### Thought process / Solution
 I knew I needed to connect to the server via netcat, and then follow some instructions. I connected and I was given a sequence of numbers, So it seemed obvious that I needed to convert this sequence into text format. I Thought hexadecimal or ASCII was the way to go, So I tried both. The flag was provided when I converted the numbers to ASCII.
 
+## Obedient Cat (Easy)
+#### Description
+This file has a flag in plain sight (aka "in-the-clear").
+
+#### Thought Process / Solution
+I downloaded the file, and checked the file type. It was an ascii file, so I output the file contents. The file output the flag.
+
+## Warmed up (Easy)
+#### Description
+What is 0x3D (base 16) in decimal (base 10)?
+
+#### Thought process / Solution
+I converted 3D to base 10, which was 61. This was the flag content.
 
 
 
