@@ -309,5 +309,11 @@ What is 0x3D (base 16) in decimal (base 10)?
 #### Thought process / Solution
 I converted 3D to base 10, which was 61. This was the flag content.
 
+## strings it (Easy)
+#### Description
+Can you find the flag in file without running it?
+
+#### Thought process / Solution
+I used the strings command on the file, It output a large number of Strings. I therefore Piped it with Grep to find the string that had picoCTF in it, which returned the flag.
 
 
