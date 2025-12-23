@@ -316,4 +316,16 @@ Can you find the flag in file without running it?
 #### Thought process / Solution
 I used the strings command on the file, It output a large number of Strings. I therefore Piped it with Grep to find the string that had picoCTF in it, which returned the flag.
 
+## what's a net cat? (Easy)
+#### Description
+Using netcat (nc) is going to be pretty important. Can you connect to fickle-tempest.picoctf.net at port 61485 to get the flag?
 
+#### Thought process / Solution
+As the description says, I used netcat (nc) with the specified host and port numbers which provided the flag.
+
+## Lets Warm Up (Easy)
+#### Description
+If I told you a word started with 0x70 in hexadecimal, what would it start with in ASCII?
+
+#### Thought process / Solution
+I converted the hexadecimal to Ascii, which then provided me the flag contents.
