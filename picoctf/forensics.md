@@ -16,4 +16,14 @@ Files can always be changed in a secret way. Can you find the flag?
 Again had to look at the hint for a clue. It stated "Look at the details of the file". I tried ls -lah, file, stat and lsattr on the cat.jpg file but nothing significant. Looked up other ways to view details and figured it was probably something to do with the metadata. 
 
 #### Solution
-Using a EXIF tool, I looked through the metadata. On the first pass over, nothing seemed out of the ordinary, but when I went back, I saw the license section had a random string of characters associated. I figured it was encoded somehow, so tried base64 decode, and it gave me the flag.
+Using an EXIF tool, I looked through the metadata. On the first pass over, nothing seemed out of the ordinary, but when I went back, I saw the license section had a random string of characters associated. I figured it was encoded somehow, so tried base64 decode, and it gave me the flag.
+
+## Riddle Registry (Easy)
+#### Description
+Hi, intrepid investigator! 📄🔍 You've stumbled upon a peculiar PDF filled with what seems like nothing more than garbled nonsense. But beware! Not everything is as it appears. Amidst the chaos lies a hidden treasure—an elusive flag waiting to be uncovered.
+
+#### Thought process
+I figured metadata was the way to go, despite this, I covered my bases by checking the pdf contents first. After seeing some blacked out sections, I was reminded of a trick where you can copy the text that is hidden under the blacked out sections, then paste it elsewhere to see what it says. I tried this, and while I could now see the hidden text, It presented no flag. So I went back to plan A and looked at metadata.
+
+#### Solution
+I looked at the properties of the pdf, but no information was found. I then used an online tool to see all the metadata. The Author seemed to be an encrypted string, and by the look of it, It was base64 encoded. After plugging it into cyberchef and decoding the base64 string, I was given the flag.
