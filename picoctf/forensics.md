@@ -27,3 +27,44 @@ I figured metadata was the way to go, despite this, I covered my bases by checki
 
 #### Solution
 I looked at the properties of the pdf, but no information was found. I then used an online tool to see all the metadata. The Author seemed to be an encrypted string, and by the look of it, It was base64 encoded. After plugging it into cyberchef and decoding the base64 string, I was given the flag.
+
+## Hidden in plainsight (Easy)
+#### Description
+You’re given a seemingly ordinary JPG image. Something is tucked away out of sight inside the file. Your task is to discover the hidden payload and extract the flag.
+
+#### Though Process
+It seemed a natural first step to view the Exif data of the jpg file. After doing this, the main thing that jumped out at me was the comment of the file, so I went from there.
+
+#### Solution
+It looked to be a base64 encoded message so I decoded the comment which lead to a new message containing "steghide" and another base64 encoded string. I looked into steghide and found a command to use "steghide extract -sf img.jpg", so I just needed the password. I decrypted the base64 again and it showed the password for the steghide file. After then running the command with the new found password, the hidden data was written to "flag.txt". I output the flag.txt file and I was given the flag.
+
+## Flag in Flame (Easy)
+#### Description
+The SOC team discovered a suspiciously large log file after a recent breach. When they opened it, they found an enormous block of encoded text instead of typical logs. Could there be something hidden within?
+
+#### Thought process
+I looked at the hint for this CTF which told me to decrypt the data into an image. So I output the file, figured it was base64 and then decoded it into a jpg file (base64 -d logs.txt > logs.jpg).
+
+#### Solution
+After getting the image from the logs, I opened it to find a long line of text that looked to be hexadump. I grabbed the text from the file using an online tool and then used CyberChef to decode the hex and the flag was provided.
+
+## Corrupted file (Easy)
+#### Description
+This file seems broken... or is it? Maybe a couple of bytes could make all the difference. Can you figure out how to bring it back to life?
+
+#### Thought process
+Looking at the file contents, I saw JFIF at the start of the file. It seemed relevant so I looked it up and It pointed to me that the file should be a JPG file.
+
+#### Solution
+After digging around a bit, I found that JPG has a specific file signiture / "magic code". I did a hexdump and found that the file signiture didn't align with the jpg file signiture. I used a tool to edit the code into the proper file signiture, Saved it as a jpg file and opened it. The image was the flag, so I copied the text over and completed the CTF.
+
+#### Red (Easy)
+#### Description
+RED, RED, RED, RED
+
+#### Thought process
+After checking all the obvious areas (metadata ect), the only clue I could find was a poem.
+
+#### Solution
+After looking at the first letter of each line in the poem, I noted it said "Check lsb", lsb being least significant bit. So, I opened cyberchef, imported the file and plugged in Extract LSB. After putting in some colour patterns, I quickly found a base64 string repeating itself. Decoding the base64 gave me the flag.
+
