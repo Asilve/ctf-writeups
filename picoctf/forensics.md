@@ -58,7 +58,7 @@ Looking at the file contents, I saw JFIF at the start of the file. It seemed rel
 #### Solution
 After digging around a bit, I found that JPG has a specific file signiture / "magic code". I did a hexdump and found that the file signiture didn't align with the jpg file signiture. I used a tool to edit the code into the proper file signiture, Saved it as a jpg file and opened it. The image was the flag, so I copied the text over and completed the CTF.
 
-#### Red (Easy)
+## RED (Easy)
 #### Description
 RED, RED, RED, RED
 
