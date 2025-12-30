@@ -68,3 +68,13 @@ After checking all the obvious areas (metadata ect), the only clue I could find 
 #### Solution
 After looking at the first letter of each line in the poem, I noted it said "Check lsb", lsb being least significant bit. So, I opened cyberchef, imported the file and plugged in Extract LSB. After putting in some colour patterns, I quickly found a base64 string repeating itself. Decoding the base64 gave me the flag.
 
+## Verify (Easy)
+#### Description
+People keep trying to trick my players with imitation flags. I want to make sure they get the real thing! I'm going to provide the SHA-256 hash and a decrypt script to help you know that my flags are legitimate.
+
+#### Thought Process
+I first looked at what files / directories I had to work with. I saw a checksum (sha256 hash), a script and a file containing a number of ascii files. I decided to get the sha256 hash of all the files in the "files" directory, and to then find the file that matched the checksum.
+
+#### Solution
+I could have done this easier with grep, however upon using "sha256sum files/*" I had the sha256 of all the files, so I then searched through all the results. I found the file that had the checksum match, and then ran the script with that file, which then decrypted the file and gave me the correct flag. NOTE: I did try to run the script on all the files in "files", however this did not work.
+
