@@ -78,3 +78,10 @@ I first looked at what files / directories I had to work with. I saw a checksum 
 #### Solution
 I could have done this easier with grep, however upon using "sha256sum files/*" I had the sha256 of all the files, so I then searched through all the results. I found the file that had the checksum match, and then ran the script with that file, which then decrypted the file and gave me the correct flag. NOTE: I did try to run the script on all the files in "files", however this did not work.
 
+## Scan Surprise (Easy)
+#### Description
+I've gotten bored of handing out flags as text. Wouldn't it be cool if they were an image instead?
+
+#### Thought Process / Solution
+I was provided an image, a QR code. Before I scanned it, I thought Ide check the metadata first. After looking at the metadata (no hints), I scanned the QR code, which then provided me with the flag.
+
